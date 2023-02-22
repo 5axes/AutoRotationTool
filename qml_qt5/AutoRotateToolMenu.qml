@@ -16,6 +16,7 @@ Menu
     MenuItem
     {
         text: catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation")
+		shortcut: "Ctrl+Shift+R"
         enabled: UM.Selection.hasSelection
         onTriggered: manager.doFastAutoOrientation()
     }
@@ -23,12 +24,14 @@ Menu
     {
         text: catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation")
         enabled: UM.Selection.hasSelection
+		shortcut: "Ctrl+Alt+R"
         onTriggered: manager.doExtendedAutoOrientation()
     }	
     MenuItem
     {
         text: catalog.i18nc("@item:inmenu", "Rotate main direction (X)")
         enabled: UM.Selection.hasSelection
+		shortcut: "Ctrl+Alt+Y"
         onTriggered: manager.rotateMainDirection()
     }
     function moveToContextMenu(contextMenu)

@@ -18,7 +18,7 @@ Cura.Menu
         Cura.MenuItem
 		{
 			text: catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation")
-			shortcut: "Ctrl+Shift+O"
+			shortcut: "Ctrl+Shift+R"
 			enabled: UM.Selection.hasSelection
 			onTriggered: manager.doFastAutoOrientation()
 		}
@@ -26,14 +26,14 @@ Cura.Menu
 		{
 			text: catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation")
 			enabled: UM.Selection.hasSelection
-			shortcut: "Ctrl+Alt+O"
+			shortcut: "Ctrl+Alt+R"
 			onTriggered: manager.doExtendedAutoOrientation()
 		}		
         Cura.MenuItem
         {
             text: catalog.i18nc("@item:inmenu", "Rotate main direction (X)")
             enabled: UM.Selection.hasSelection
-			shortcut: "Ctrl+Alt+X"
+			shortcut: "Ctrl+Alt+Y"
             onTriggered: manager.rotateMainDirection()
         }			
     }
