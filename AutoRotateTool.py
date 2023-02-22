@@ -47,7 +47,7 @@ class AutoRotateTool(Extension, QObject,):
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)        
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate main direction (X)"), self.rotateMainDirection)
 
-        self._message = Message(title=catalog.i18nc("@info:title", "Rotate Tool"))
+        self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotate Tool"))
         self._additional_menu = None  # type: Optional[QObject]
 
         
@@ -82,7 +82,7 @@ class AutoRotateTool(Extension, QObject,):
 
         if USE_QT5:
             context_menu.insertSeparator(0)
-            context_menu.insertMenu(0, catalog.i18nc("@info:title", "Rotate Tool"))
+            context_menu.insertMenu(0, catalog.i18nc("@info:title", "Auto Rotate Tool"))
 
         # Move additional menu items into context menu
         self._additional_menu.moveToContextMenu(context_menu)
