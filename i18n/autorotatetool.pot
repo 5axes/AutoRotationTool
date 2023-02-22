@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotate Too\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 13:42+0000\n"
+"POT-Creation-Date: 2023-02-22 13:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: AutoRotateTool.py:50 AutoRotateTool.py:85
 msgctxt "@info:title"
-msgid "Rotate Tool"
+msgid "Auto Rotate Tool"
 msgstr ""
 
 #: AutoRotateTool.py:97
