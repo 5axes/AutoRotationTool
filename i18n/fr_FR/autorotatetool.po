@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotate Too\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 13:38+0000\n"
-"PO-Revision-Date: 2023-02-22 14:41+0200\n"
+"POT-Creation-Date: 2023-02-22 13:46+0000\n"
+"PO-Revision-Date: 2023-02-22 14:48+0200\n"
 "Last-Translator: 5axes <5axes@free.fr>\n"
 "Language-Team: 5axes\n"
 "Language: fr\n"
@@ -37,8 +37,8 @@ msgstr "Rotation selon direction principale (X)"
 
 #: AutoRotateTool.py:50 AutoRotateTool.py:85
 msgctxt "@info:title"
-msgid "Rotate Tool"
-msgstr "Outil de rotation"
+msgid "Auto Rotate Tool"
+msgstr "Outil d'auto-rotation"
 
 #: AutoRotateTool.py:97
 msgctxt "@info:status"
@@ -77,4 +77,4 @@ msgstr "Tous les objets sélectionnés ont été orientés."
 #: qml_qt6/AutoRotateToolMenu.qml:15
 msgctxt "@item:inmenu"
 msgid "Rotate Tool"
-msgstr "Outil de rotation"
+msgstr "Outil d'auto-rotation"
