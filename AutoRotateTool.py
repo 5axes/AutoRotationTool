@@ -60,7 +60,7 @@ class AutoRotateTool(Extension, QObject,):
         self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotate Tool"))
         self._additional_menu = None  # type: Optional[QObject]
 
-        
+    # Origine Source Code from [FieldOfView ](https://github.com/fieldOfView)   
     def _onEngineCreated(self) -> None:
         # To add items to the ContextMenu, we need access to the QML engine
         # There is no way to access the context menu directly, so we have to search for it
