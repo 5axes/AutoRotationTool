@@ -14,7 +14,6 @@ Cura.Menu
 
         title: catalog.i18nc("@item:inmenu", "Rotate Tool")
 
-
         Cura.MenuItem
 		{
 			text: catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation")

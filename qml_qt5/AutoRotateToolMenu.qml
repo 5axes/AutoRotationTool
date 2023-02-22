@@ -12,7 +12,9 @@ import Cura 1.0 as Cura
 Menu
 {
     id: base
-
+    
+	title: catalog.i18nc("@item:inmenu", "Rotate Tool")
+	
     MenuItem
     {
         text: catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation")
