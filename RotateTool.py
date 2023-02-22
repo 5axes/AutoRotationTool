@@ -4,15 +4,12 @@
 USE_QT5 = False
 try:
     from PyQt6.QtCore import pyqtSlot, QObject
-    from PyQt6.QtWidgets import QFileDialog
 except ImportError:
     from PyQt5.QtCore import pyqtSlot, QObject
-    from PyQt5.QtWidgets import QFileDialog
     USE_QT5 = True
 
 from cura.CuraApplication import CuraApplication
 from UM.Extension import Extension
-from UM.PluginRegistry import PluginRegistry
 from UM.Message import Message
 from UM.Logger import Logger
 from UM.Version import Version
@@ -20,34 +17,17 @@ from UM.Version import Version
 from UM.Scene.Selection import Selection
 from UM.Scene.SceneNode import SceneNode
 from UM.Operations.GroupedOperation import GroupedOperation
-from UM.Operations.AddSceneNodeOperation import AddSceneNodeOperation
-from UM.Operations.RemoveSceneNodeOperation import RemoveSceneNodeOperation
-from UM.Operations.SetTransformOperation import SetTransformOperation
-from cura.Scene.CuraSceneNode import CuraSceneNode
-from cura.Scene.SliceableObjectDecorator import SliceableObjectDecorator
-from cura.Scene.BuildPlateDecorator import BuildPlateDecorator
-from UM.Mesh.MeshData import MeshData, calculateNormalsFromIndexedVertices
-from UM.Mesh.MeshBuilder import MeshBuilder
-from UM.Math.AxisAlignedBox import AxisAlignedBox
-from UM.Mesh.ReadMeshJob import ReadMeshJob
+
 from UM.Math.Vector import Vector
 from UM.Math.Matrix import Matrix
-from UM.Math.Quaternion import Quaternion
-from UM.Math.Plane import Plane
 
 from .SetTransformMatrixOperation import SetTransformMatrixOperation
-from .SetParentOperationSimplified import SetParentOperationSimplified
-from .SetMeshDataAndNameOperation import SetMeshDataAndNameOperation
 
 from UM.i18n import i18nCatalog
 catalog = i18nCatalog("rotatetool")
 
 import os
-import sys
 import numpy
-import trimesh
-import random
-import copy
 
 from typing import Optional, List, Dict
 from .CalculateOrientationJob import CalculateOrientationJob
@@ -59,7 +39,7 @@ class RotateTool(Extension, QObject,):
 
         self._application = CuraApplication.getInstance()
 
-        self._qml_folder = "qml" if not USE_QT5 else "qml_qt5"
+        self._qml_folder = "qml_qt6" if not USE_QT5 else "qml_qt5"
 
         self._application.engineCreatedSignal.connect(self._onEngineCreated)
 
