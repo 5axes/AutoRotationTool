@@ -32,7 +32,7 @@ Cura.Menu
         {
             text: catalog.i18nc("@item:inmenu", "Rotate main direction (X)")
             enabled: UM.Selection.hasSelection
-			shortcut: "Ctrl+Alt+Y"
+			shortcut: "Ctrl+Alt+X"
             onTriggered: manager.rotateMainDirection()
         }			
     }
