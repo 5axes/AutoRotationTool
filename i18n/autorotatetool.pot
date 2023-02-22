@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Auto Rotate Too package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Auto Rotate Too\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-22 13:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: AutoRotateTool.py:46 qml_qt6/AutoRotateToolMenu.qml:20
+#: qml_qt5/AutoRotateToolMenu.qml:18
+msgctxt "@item:inmenu"
+msgid "Calculate fast optimal printing orientation"
+msgstr ""
+
+#: AutoRotateTool.py:47 qml_qt6/AutoRotateToolMenu.qml:27
+#: qml_qt5/AutoRotateToolMenu.qml:25
+msgctxt "@item:inmenu"
+msgid "Calculate extended optimal printing orientation"
+msgstr ""
+
+#: AutoRotateTool.py:48 qml_qt6/AutoRotateToolMenu.qml:34
+#: qml_qt5/AutoRotateToolMenu.qml:32
+msgctxt "@item:inmenu"
+msgid "Rotate main direction (X)"
+msgstr ""
+
+#: AutoRotateTool.py:50 AutoRotateTool.py:85
+msgctxt "@info:title"
+msgid "Rotate Tool"
+msgstr ""
+
+#: AutoRotateTool.py:97
+msgctxt "@info:status"
+msgid "Please select a single model first"
+msgstr ""
+
+#: AutoRotateTool.py:102 AutoRotateTool.py:120
+msgctxt "@info:status"
+msgid "Please select one or more models first"
+msgstr ""
+
+#: AutoRotateTool.py:246
+msgctxt "@info:status"
+msgid ""
+"No objects selected to orient. Please select one or more objects and try "
+"again."
+msgstr ""
+
+#: AutoRotateTool.py:246 AutoRotateTool.py:250 AutoRotateTool.py:264
+msgctxt "@title"
+msgid "Auto-Orientation"
+msgstr ""
+
+#: AutoRotateTool.py:250
+msgctxt "@info:status"
+msgid "Calculating the optimal orientation..."
+msgstr ""
+
+#: AutoRotateTool.py:263
+msgctxt "@info:status"
+msgid "All selected objects have been oriented."
+msgstr ""
+
+#: qml_qt6/AutoRotateToolMenu.qml:15
+msgctxt "@item:inmenu"
+msgid "Rotate Tool"
+msgstr ""
