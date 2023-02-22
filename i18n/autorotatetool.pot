@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotate Too\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 14:14+0000\n"
+"POT-Creation-Date: 2023-02-22 14:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: AutoRotateTool.py:56 qml_qt6/AutoRotateToolMenu.qml:20
-#: qml_qt5/AutoRotateToolMenu.qml:18
+#: AutoRotateTool.py:56 qml_qt6/AutoRotateToolMenu.qml:19
+#: qml_qt5/AutoRotateToolMenu.qml:20
 msgctxt "@item:inmenu"
 msgid "Calculate fast optimal printing orientation"
 msgstr ""
 
-#: AutoRotateTool.py:57 qml_qt6/AutoRotateToolMenu.qml:27
-#: qml_qt5/AutoRotateToolMenu.qml:25
+#: AutoRotateTool.py:57 qml_qt6/AutoRotateToolMenu.qml:26
+#: qml_qt5/AutoRotateToolMenu.qml:27
 msgctxt "@item:inmenu"
 msgid "Calculate extended optimal printing orientation"
 msgstr ""
 
-#: AutoRotateTool.py:58 qml_qt6/AutoRotateToolMenu.qml:34
-#: qml_qt5/AutoRotateToolMenu.qml:32
+#: AutoRotateTool.py:58 qml_qt6/AutoRotateToolMenu.qml:33
+#: qml_qt5/AutoRotateToolMenu.qml:34
 msgctxt "@item:inmenu"
 msgid "Rotate main direction (X)"
 msgstr ""
@@ -72,7 +72,7 @@ msgctxt "@info:status"
 msgid "All selected objects have been oriented."
 msgstr ""
 
-#: qml_qt6/AutoRotateToolMenu.qml:15
+#: qml_qt6/AutoRotateToolMenu.qml:15 qml_qt5/AutoRotateToolMenu.qml:16
 msgctxt "@item:inmenu"
 msgid "Rotate Tool"
 msgstr ""
