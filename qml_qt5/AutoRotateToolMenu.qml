@@ -42,5 +42,5 @@ Menu
         }
     }
 
-    UM.I18nCatalog { id: catalog; name: "rotatetool" }
+    UM.I18nCatalog { id: catalog; name: "autorotatetool" }
 }

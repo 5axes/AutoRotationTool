@@ -1,6 +1,9 @@
 # Copyright (c) 2023 5@xes
 # MeshTools is released under the terms of the AGPLv3 or higher.
 
+import os
+import numpy
+
 USE_QT5 = False
 try:
     from PyQt6.QtCore import pyqtSlot, QObject
@@ -8,7 +11,10 @@ except ImportError:
     from PyQt5.QtCore import pyqtSlot, QObject
     USE_QT5 = True
 
+from typing import Optional, List, Dict
+
 from cura.CuraApplication import CuraApplication
+
 from UM.Extension import Extension
 from UM.Message import Message
 from UM.Logger import Logger
@@ -17,21 +23,25 @@ from UM.Version import Version
 from UM.Scene.Selection import Selection
 from UM.Scene.SceneNode import SceneNode
 from UM.Operations.GroupedOperation import GroupedOperation
+from UM.Resources import Resources
 
 from UM.Math.Vector import Vector
 from UM.Math.Matrix import Matrix
 
+from UM.i18n import i18nCatalog
+
+from .CalculateOrientationJob import CalculateOrientationJob
 from .SetTransformMatrixOperation import SetTransformMatrixOperation
 
-from UM.i18n import i18nCatalog
+Resources.addSearchPath(
+    os.path.join(os.path.abspath(os.path.dirname(__file__)))
+)  # Plugin translation file import
+
 catalog = i18nCatalog("autorotatetool")
 
-import os
-import numpy
-
-from typing import Optional, List, Dict
-from .CalculateOrientationJob import CalculateOrientationJob
-
+if catalog.hasTranslationLoaded():
+    Logger.log("i", "Auto Rotate Tool Plugin translation loaded!")
+    
 class AutoRotateTool(Extension, QObject,):
     def __init__(self, parent = None) -> None:
         QObject.__init__(self, parent)

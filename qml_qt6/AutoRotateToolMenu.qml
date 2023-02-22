@@ -48,5 +48,5 @@ Cura.Menu
         contextMenu.insertMenu(0, rotateToolMenu)
     }
 
-    UM.I18nCatalog { id: catalog; name: "rotatetool" }
+    UM.I18nCatalog { id: catalog; name: "autorotatetool" }
 }
