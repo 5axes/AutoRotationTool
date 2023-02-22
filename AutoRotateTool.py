@@ -24,7 +24,7 @@ from UM.Math.Matrix import Matrix
 from .SetTransformMatrixOperation import SetTransformMatrixOperation
 
 from UM.i18n import i18nCatalog
-catalog = i18nCatalog("rotatetool")
+catalog = i18nCatalog("autorotatetool")
 
 import os
 import numpy
@@ -32,7 +32,7 @@ import numpy
 from typing import Optional, List, Dict
 from .CalculateOrientationJob import CalculateOrientationJob
 
-class RotateTool(Extension, QObject,):
+class AutoRotateTool(Extension, QObject,):
     def __init__(self, parent = None) -> None:
         QObject.__init__(self, parent)
         Extension.__init__(self)
@@ -75,7 +75,7 @@ class RotateTool(Extension, QObject,):
             return
 
         Logger.log("d", "Inserting item in context menu")
-        qml_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self._qml_folder, "RotateToolMenu.qml")
+        qml_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self._qml_folder, "AutoRotateToolMenu.qml")
         self._additional_menu = self._application.createQmlComponent(qml_path, {"manager": self})
         if not self._additional_menu:
             return
@@ -175,7 +175,7 @@ class RotateTool(Extension, QObject,):
             # For debuging output the vector director and the Angle ( in radians and degree)
             Logger.log('d', "s_lg   : {}".format(s_lg))
             Logger.log('d', "Angle : {} Angle° : {}".format(anGl,deganGl)) 
-            #Something done in the RotateTool.py ... It's not very clear for me, but I still have to investigate this point
+            #Something done in the AutoRotateTool.py ... It's not very clear for me, but I still have to investigate this point
             dv=self._dot_vector(vectY,(s_lg.x, s_lg.y, 0))
             Logger.log('d', "Dot vector : {}".format(dv))  
             if dv > 0 :

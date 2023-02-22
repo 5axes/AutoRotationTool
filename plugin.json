@@ -1,9 +1,9 @@
 {
-    "name": "Rotate Tool",
+    "name": "Auto Rotate Tool",
     "author": "5@xes",
     "version": "3.7.0",
     "description": "Adds rotation tools in context Menu",
     "api": 7,
     "supported_sdk_versions": ["7.0.0", "8.0.0"],
-    "i18n-catalog": "rotatetool"
+    "i18n-catalog": "autorotatetool"
 }
