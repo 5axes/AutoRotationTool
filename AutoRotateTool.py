@@ -1,15 +1,19 @@
+#
 # Copyright (c) 2023 5@xes
-# MeshTools is released under the terms of the AGPLv3 or higher.
+# AutoRotateTool is released under the terms of the AGPLv3 or higher.
+# AutoRotateTool plugin is a simple wrapper around the excellent OrientationPlugin of  Nallah
+# https://github.com/nallath/CuraOrientationPlugin
+#
 
 import os
 import numpy
 
-USE_QT5 = False
+VERSION_QT5 = False
 try:
     from PyQt6.QtCore import pyqtSlot, QObject
 except ImportError:
     from PyQt5.QtCore import pyqtSlot, QObject
-    USE_QT5 = True
+    VERSION_QT5 = True
 
 from typing import Optional, List, Dict
 
@@ -31,6 +35,7 @@ from UM.Math.Matrix import Matrix
 from UM.i18n import i18nCatalog
 
 from .CalculateOrientationJob import CalculateOrientationJob
+# Origine Source Code from [FieldOfView ](https://github.com/fieldOfView) 
 from .SetTransformMatrixOperation import SetTransformMatrixOperation
 
 Resources.addSearchPath(
@@ -49,13 +54,14 @@ class AutoRotateTool(Extension, QObject,):
 
         self._application = CuraApplication.getInstance()
 
-        self._qml_folder = "qml_qt6" if not USE_QT5 else "qml_qt5"
+        self._qml_folder = "qml_qt6" if not VERSION_QT5 else "qml_qt5"
 
         self._application.engineCreatedSignal.connect(self._onEngineCreated)
 
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation"), self.doFastAutoOrientation)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)        
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate main direction (X)"), self.rotateMainDirection)
+        self.addMenuItem(catalog.i18nc("@item:inmenu", "Reinit Rotation"), self.resetRotation)
 
         self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotate Tool"))
         self._additional_menu = None  # type: Optional[QObject]
@@ -71,7 +77,7 @@ class AutoRotateTool(Extension, QObject,):
         context_menu = None
         for child in main_window.contentItem().children():
             try:
-                if not USE_QT5:
+                if not VERSION_QT5:
                     test = child.handleVisibility # With QtQuick Controls 2, ContextMenu is the only item that has a findItemIndex function in the main window root contentitem
                 else:
                     test = child.findItemIndex  # With QtQuick Controls 1, ContextMenu is the only item that has a findItemIndex function
@@ -90,7 +96,7 @@ class AutoRotateTool(Extension, QObject,):
         if not self._additional_menu:
             return
 
-        if USE_QT5:
+        if VERSION_QT5:
             context_menu.insertSeparator(0)
             context_menu.insertMenu(0, catalog.i18nc("@info:title", "Auto Rotate Tool"))
 
@@ -99,15 +105,15 @@ class AutoRotateTool(Extension, QObject,):
 
     def _getSelectedNodes(self, force_single = False) -> List[SceneNode]:
         self._message.hide()
-        selection = Selection.getAllSelectedObjects()[:]
+        selected = Selection.getAllSelectedObjects()[:]
         if force_single:
-            if len(selection) == 1:
-                return selection[:]
+            if len(selected) == 1:
+                return selected[:]
 
             self._message.setText(catalog.i18nc("@info:status", "Please select a single model first"))
         else:
-            if len(selection) >= 1:
-                return selection[:]
+            if len(selected) >= 1:
+                return selected[:]
 
             self._message.setText(catalog.i18nc("@info:status", "Please select one or more models first"))
 
@@ -116,10 +122,10 @@ class AutoRotateTool(Extension, QObject,):
 
     def _getAllSelectedNodes(self) -> List[SceneNode]:
         self._message.hide()
-        selection = Selection.getAllSelectedObjects()[:]
-        if selection:
+        selected = Selection.getAllSelectedObjects()[:]
+        if selected:
             deep_selection = []  # type: List[SceneNode]
-            for selected_node in selection:
+            for selected_node in selected:
                 if selected_node.hasChildren():
                     deep_selection = deep_selection + selected_node.getAllChildren()
                 if selected_node.getMeshData() != None:
@@ -131,6 +137,15 @@ class AutoRotateTool(Extension, QObject,):
         self._message.show()
 
         return []          
+ 
+    @pyqtSlot()
+    def resetRotation(self) -> None:
+        """Reset the orientation of the mesh(es) to their original orientation(s)"""
+
+        for node in self._getSelectedObjectsWithoutSelectedAncestors():
+            node.setMirror(Vector(1, 1, 1))
+
+        Selection.applyOperation(SetTransformOperation, None, Quaternion(), None)
         
     @pyqtSlot()
     def rotateMainDirection(self) -> None:
@@ -207,8 +222,10 @@ class AutoRotateTool(Extension, QObject,):
             local_transformation.multiply(rotation)
             local_transformation.multiply(node.getLocalTransformation()) 
             # Log for debugging and Analyse           
-            Logger.log('d', "Local_transformation    :\n{}".format(node.getLocalTransformation())) 
-            Logger.log('d', "TransformMatrixOperation :\n{}".format(local_transformation))                       
+            Logger.log('d', "Local_transformation     :\n{}".format(node.getLocalTransformation())) 
+            Logger.log('d', "TransformMatrixOperation :\n{}".format(local_transformation))   
+            # By using this code rotate the Element but no Undo is possible via the Reinit rotation function
+            # node.setTransformation(local_transformation)            
             op.addOperation(SetTransformMatrixOperation(node, local_transformation))
 
         op.push()

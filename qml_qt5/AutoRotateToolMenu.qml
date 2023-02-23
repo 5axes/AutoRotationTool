@@ -33,6 +33,12 @@ Menu
         enabled: UM.Selection.hasSelection
         onTriggered: manager.rotateMainDirection()
     }
+	MenuItem
+    {
+        text: catalog.i18nc("@item:inmenu", "Reinit Rotation")
+        enabled: UM.Selection.hasSelection
+        onTriggered: manager.resetRotation()
+    }
     function moveToContextMenu(contextMenu)
     {
         for(var i in base.items)

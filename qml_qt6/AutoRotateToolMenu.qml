@@ -34,6 +34,13 @@ Cura.Menu
             enabled: UM.Selection.hasSelection
 			shortcut: "Ctrl+Alt+X"
             onTriggered: manager.rotateMainDirection()
+        }
+        Cura.MenuItem
+        {
+            text: catalog.i18nc("@item:inmenu", "Reinit Rotation")
+            enabled: UM.Selection.hasSelection
+			shortcut: "Ctrl+Alt+I"
+            onTriggered: manager.resetRotation()
         }			
     }
     Cura.MenuSeparator
