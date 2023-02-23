@@ -24,3 +24,6 @@ It allows an extended calculation and orientation according to the best printabl
 
 ### Rotate main direction (X)
 Rotate the selected element automaticaly on its longest side, parallel to the X axis of the plate.
+
+### Reinit Rotation
+Reinit the selected Objects to their initial Orientation. Function similar to the Réinit Button in the Rotation Tool Menu.
