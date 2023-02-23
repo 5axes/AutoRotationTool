@@ -1,7 +1,7 @@
 #
 # Copyright (c) 2023 5@xes
 # AutoRotateTool is released under the terms of the AGPLv3 or higher.
-# AutoRotateTool plugin is a simple wrapper around the excellent OrientationPlugin of  Nallah
+# AutoRotateTool plugin is a simple wrapper around the excellent OrientationPlugin of Nallah
 # https://github.com/nallath/CuraOrientationPlugin
 #
 
