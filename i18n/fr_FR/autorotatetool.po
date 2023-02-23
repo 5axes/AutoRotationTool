@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotate Too\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-22 13:48+0000\n"
-"PO-Revision-Date: 2023-02-22 15:11+0200\n"
+"POT-Creation-Date: 2023-02-23 11:03+0000\n"
+"PO-Revision-Date: 2023-02-23 12:22+0200\n"
 "Last-Translator: 5axes <5axes@free.fr>\n"
 "Language-Team: 5axes\n"
 "Language: fr\n"
@@ -17,40 +17,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 0.7.1\n"
 
-#: AutoRotateTool.py:46 qml_qt6/AutoRotateToolMenu.qml:20
-#: qml_qt5/AutoRotateToolMenu.qml:18
+#: AutoRotateTool.py:61 qml_qt6/AutoRotateToolMenu.qml:19
+#: qml_qt5/AutoRotateToolMenu.qml:20
 msgctxt "@item:inmenu"
 msgid "Calculate fast optimal printing orientation"
 msgstr "Calcul l'orientation rapide de l'impression"
 
-#: AutoRotateTool.py:47 qml_qt6/AutoRotateToolMenu.qml:27
-#: qml_qt5/AutoRotateToolMenu.qml:25
+#: AutoRotateTool.py:62 qml_qt6/AutoRotateToolMenu.qml:26
+#: qml_qt5/AutoRotateToolMenu.qml:26
 msgctxt "@item:inmenu"
 msgid "Calculate extended optimal printing orientation"
 msgstr "Calcul l'orientation optimale de l'impression"
 
-#: AutoRotateTool.py:48 qml_qt6/AutoRotateToolMenu.qml:34
+#: AutoRotateTool.py:63 qml_qt6/AutoRotateToolMenu.qml:33
 #: qml_qt5/AutoRotateToolMenu.qml:32
 msgctxt "@item:inmenu"
 msgid "Rotate main direction (X)"
 msgstr "Rotation selon direction principale (X)"
 
-#: AutoRotateTool.py:50 AutoRotateTool.py:85
+#: AutoRotateTool.py:64 qml_qt6/AutoRotateToolMenu.qml:40
+#: qml_qt5/AutoRotateToolMenu.qml:38
+msgctxt "@item:inmenu"
+msgid "Reinit Rotation"
+msgstr "Réinitialiser la Rotation"
+
+#: AutoRotateTool.py:66 AutoRotateTool.py:101
 msgctxt "@info:title"
 msgid "Auto Rotate Tool"
 msgstr "Outil d'auto-rotation"
 
-#: AutoRotateTool.py:97
+#: AutoRotateTool.py:113
 msgctxt "@info:status"
 msgid "Please select a single model first"
 msgstr "Sélectionnez tout d'abord une pièce"
 
-#: AutoRotateTool.py:102 AutoRotateTool.py:120
+#: AutoRotateTool.py:118 AutoRotateTool.py:136
 msgctxt "@info:status"
 msgid "Please select one or more models first"
 msgstr "Sélectionnez tout d'abord des pièces"
 
-#: AutoRotateTool.py:246
+#: AutoRotateTool.py:273
 msgctxt "@info:status"
 msgid ""
 "No objects selected to orient. Please select one or more objects and try "
@@ -59,22 +65,22 @@ msgstr ""
 "Aucun objet sélectionné pour orienter. Veuillez sélectionner un ou plusieurs "
 "objets et réessayer."
 
-#: AutoRotateTool.py:246 AutoRotateTool.py:250 AutoRotateTool.py:264
+#: AutoRotateTool.py:273 AutoRotateTool.py:277 AutoRotateTool.py:291
 msgctxt "@title"
 msgid "Auto-Orientation"
 msgstr "Orientation automatique"
 
-#: AutoRotateTool.py:250
+#: AutoRotateTool.py:277
 msgctxt "@info:status"
 msgid "Calculating the optimal orientation..."
 msgstr "Calculer l'orientation optimale..."
 
-#: AutoRotateTool.py:263
+#: AutoRotateTool.py:290
 msgctxt "@info:status"
 msgid "All selected objects have been oriented."
 msgstr "Tous les objets sélectionnés ont été orientés."
 
-#: qml_qt6/AutoRotateToolMenu.qml:15
+#: qml_qt6/AutoRotateToolMenu.qml:15 qml_qt5/AutoRotateToolMenu.qml:16
 msgctxt "@item:inmenu"
 msgid "Rotate Tool"
 msgstr "Outil d'auto-rotation"
