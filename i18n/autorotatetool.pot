@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotate Too\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-23 11:03+0000\n"
+"POT-Creation-Date: 2023-02-23 11:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: AutoRotateTool.py:61 qml_qt6/AutoRotateToolMenu.qml:19
+#: AutoRotateTool.py:67 qml_qt6/AutoRotateToolMenu.qml:19
 #: qml_qt5/AutoRotateToolMenu.qml:20
 msgctxt "@item:inmenu"
 msgid "Calculate fast optimal printing orientation"
 msgstr ""
 
-#: AutoRotateTool.py:62 qml_qt6/AutoRotateToolMenu.qml:26
+#: AutoRotateTool.py:68 qml_qt6/AutoRotateToolMenu.qml:26
 #: qml_qt5/AutoRotateToolMenu.qml:26
 msgctxt "@item:inmenu"
 msgid "Calculate extended optimal printing orientation"
 msgstr ""
 
-#: AutoRotateTool.py:63 qml_qt6/AutoRotateToolMenu.qml:33
+#: AutoRotateTool.py:69 qml_qt6/AutoRotateToolMenu.qml:33
 #: qml_qt5/AutoRotateToolMenu.qml:32
 msgctxt "@item:inmenu"
 msgid "Rotate main direction (X)"
 msgstr ""
 
-#: AutoRotateTool.py:64 qml_qt6/AutoRotateToolMenu.qml:40
+#: AutoRotateTool.py:70 qml_qt6/AutoRotateToolMenu.qml:40
 #: qml_qt5/AutoRotateToolMenu.qml:38
 msgctxt "@item:inmenu"
 msgid "Reinit Rotation"
 msgstr ""
 
-#: AutoRotateTool.py:66 AutoRotateTool.py:101
+#: AutoRotateTool.py:72 AutoRotateTool.py:107
 msgctxt "@info:title"
 msgid "Auto Rotate Tool"
 msgstr ""
 
-#: AutoRotateTool.py:113
+#: AutoRotateTool.py:119
 msgctxt "@info:status"
 msgid "Please select a single model first"
 msgstr ""
 
-#: AutoRotateTool.py:118 AutoRotateTool.py:136
+#: AutoRotateTool.py:124 AutoRotateTool.py:142
 msgctxt "@info:status"
 msgid "Please select one or more models first"
 msgstr ""
 
-#: AutoRotateTool.py:273
+#: AutoRotateTool.py:276
 msgctxt "@info:status"
 msgid ""
 "No objects selected to orient. Please select one or more objects and try "
 "again."
 msgstr ""
 
-#: AutoRotateTool.py:273 AutoRotateTool.py:277 AutoRotateTool.py:291
+#: AutoRotateTool.py:276 AutoRotateTool.py:280 AutoRotateTool.py:294
 msgctxt "@title"
 msgid "Auto-Orientation"
 msgstr ""
 
-#: AutoRotateTool.py:277
+#: AutoRotateTool.py:280
 msgctxt "@info:status"
 msgid "Calculating the optimal orientation..."
 msgstr ""
 
-#: AutoRotateTool.py:290
+#: AutoRotateTool.py:293
 msgctxt "@info:status"
 msgid "All selected objects have been oriented."
 msgstr ""
