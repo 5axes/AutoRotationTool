@@ -29,6 +29,12 @@ from UM.Scene.SceneNode import SceneNode
 from UM.Operations.GroupedOperation import GroupedOperation
 from UM.Resources import Resources
 
+from UM.Math.Plane import Plane
+from UM.Math.Quaternion import Quaternion
+from UM.Math.Vector import Vector
+
+from UM.Operations.SetTransformOperation import SetTransformOperation
+
 from UM.Math.Vector import Vector
 from UM.Math.Matrix import Matrix
 
@@ -141,9 +147,6 @@ class AutoRotateTool(Extension, QObject,):
     @pyqtSlot()
     def resetRotation(self) -> None:
         """Reset the orientation of the mesh(es) to their original orientation(s)"""
-
-        for node in self._getSelectedObjectsWithoutSelectedAncestors():
-            node.setMirror(Vector(1, 1, 1))
 
         Selection.applyOperation(SetTransformOperation, None, Quaternion(), None)
         
