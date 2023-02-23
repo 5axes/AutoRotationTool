@@ -23,6 +23,9 @@ The orientation function is a simple wrapper around the excellent STL-Tweaker by
 It allows an extended calculation and orientation according to the best printable calculated orientation.
 
 ### Rotate main direction (X)
+Rotate the selected element automaticaly on its main direction, parallel to the X axis of the plate.
+
+### Rotate longest side (X)
 Rotate the selected element automaticaly on its longest side, parallel to the X axis of the plate.
 
 ### Reinit Rotation

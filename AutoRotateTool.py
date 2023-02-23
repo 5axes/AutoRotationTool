@@ -7,6 +7,7 @@
 
 import os
 import numpy
+import trimesh
 
 VERSION_QT5 = False
 try:
@@ -67,6 +68,7 @@ class AutoRotateTool(Extension, QObject,):
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation"), self.doFastAutoOrientation)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)        
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate main direction (X)"), self.rotateMainDirection)
+        self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate side direction (X)"), self.rotateSideDirection)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Reinit Rotation"), self.resetRotation)
 
         self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotate Tool"))
@@ -152,6 +154,52 @@ class AutoRotateTool(Extension, QObject,):
         
     @pyqtSlot()
     def rotateMainDirection(self) -> None:
+        nodes_list = self._getSelectedNodes()
+        if not nodes_list:
+            return
+
+        op = GroupedOperation()
+        for node in nodes_list:
+            mesh_data = node.getMeshData()
+            if not mesh_data:
+                continue
+            
+            hull_polygon = node.callDecoration("_compute2DConvexHull")
+            # test but not sure in witch case we have this situation ?
+            if not hull_polygon or hull_polygon.getPoints is None:
+                Logger.log("w", "Object {} cannot be calculated because it has no convex hull.".format(node.getName()))
+                continue
+
+            points=hull_polygon.getPoints()
+            # Get the Rotation Matrix     
+            Logger.log('d', "Points : \n{}".format(points))                  
+            transform, rectangle = trimesh.bounds.oriented_bounds_2D(points)
+            Logger.log('d', "Rotation : \n{}".format(transform)) 
+
+            # Change Transfo data
+            t = Matrix()
+            Vect = [transform[1][1],0,transform[0][1]]
+            t.setColumn(0,Vect)
+            # Vect = [0,1,0]
+            # t.setColumn(1,Vect)
+            Vect = [transform[1][0],0,transform[0][0]]
+            t.setColumn(2,Vect)
+            #local_transformation.setColumn(1,transform[1])
+            local_transformation = Matrix()
+            local_transformation.multiply(t)
+            local_transformation.multiply(node.getLocalTransformation())  
+
+            # Log for debugging and Analyse           
+            Logger.log('d', "Local_transformation     :\n{}".format(node.getLocalTransformation())) 
+            Logger.log('d', "TransformMatrixOperation :\n{}".format(local_transformation))   
+            # By using this code rotate the Element but no Undo is possible via the Reinit rotation function
+            # node.setTransformation(local_transformation)            
+            op.addOperation(SetTransformMatrixOperation(node, local_transformation))
+
+        op.push()
+
+    @pyqtSlot()
+    def rotateSideDirection(self) -> None:
         nodes_list = self._getSelectedNodes()
         if not nodes_list:
             return

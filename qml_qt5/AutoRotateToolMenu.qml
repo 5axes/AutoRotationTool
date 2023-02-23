@@ -33,6 +33,12 @@ Menu
         enabled: UM.Selection.hasSelection
         onTriggered: manager.rotateMainDirection()
     }
+    MenuItem
+    {
+        text: catalog.i18nc("@item:inmenu", "Rotate side direction (X)")
+        enabled: UM.Selection.hasSelection
+        onTriggered: manager.rotateSideDirection()
+    }
 	MenuItem
     {
         text: catalog.i18nc("@item:inmenu", "Reinit Rotation")
