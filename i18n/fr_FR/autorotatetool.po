@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Auto Rotate Too\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-23 15:52+0000\n"
-"PO-Revision-Date: 2023-02-23 16:53+0200\n"
+"PO-Revision-Date: 2023-02-23 17:21+0200\n"
 "Last-Translator: 5axes <5axes@free.fr>\n"
 "Language-Team: 5axes\n"
 "Language: fr\n"
@@ -21,13 +21,13 @@ msgstr ""
 #: qml_qt5/AutoRotateToolMenu.qml:20
 msgctxt "@item:inmenu"
 msgid "Calculate fast optimal printing orientation"
-msgstr "Calcul l'orientation Rapide"
+msgstr "Calcul Orientation Rapide"
 
 #: AutoRotateTool.py:69 qml_qt6/AutoRotateToolMenu.qml:26
 #: qml_qt5/AutoRotateToolMenu.qml:26
 msgctxt "@item:inmenu"
 msgid "Calculate extended optimal printing orientation"
-msgstr "Calcul l'orientation Optimale"
+msgstr "Calcul Orientation Optimale"
 
 #: AutoRotateTool.py:70 qml_qt6/AutoRotateToolMenu.qml:33
 #: qml_qt5/AutoRotateToolMenu.qml:32
