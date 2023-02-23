@@ -3,6 +3,9 @@
 # AutoRotateTool is released under the terms of the AGPLv3 or higher.
 # AutoRotateTool plugin is a simple wrapper around the excellent OrientationPlugin of Nallah
 # https://github.com/nallath/CuraOrientationPlugin
+# Original Source for Auto Orientation : https://github.com/iot-salzburg/STL-tweaker
+# Post on Cura : https://community.ultimaker.com/topic/16037-3d-object-auto-rotate-plugin-for-cura-1504-23
+# Tweaker_-_Auto_Rotation_Module_for_FDM_3D_Printing : https://www.researchgate.net/publication/311765131_Tweaker_-_Auto_Rotation_Module_for_FDM_3D_Printing
 #
 
 import os
