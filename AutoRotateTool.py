@@ -172,18 +172,18 @@ class AutoRotateTool(Extension, QObject,):
 
             points=hull_polygon.getPoints()
             # Get the Rotation Matrix     
-            Logger.log('d', "Points : \n{}".format(points))                  
+            # Logger.log('d', "Points : \n{}".format(points))                  
             transform, rectangle = trimesh.bounds.oriented_bounds_2D(points)
             Logger.log('d', "Rotation : \n{}".format(transform)) 
 
             # Change Transfo data
+            # Don't ask me Why just test and try not sure of the validity of oriented_bounds_2D by trimesh 
             t = Matrix()
             Vect = [transform[1][1],0,transform[0][1]]
             t.setColumn(0,Vect)
-            # Vect = [0,1,0]
-            # t.setColumn(1,Vect)
             Vect = [transform[1][0],0,transform[0][0]]
             t.setColumn(2,Vect)
+
             #local_transformation.setColumn(1,transform[1])
             local_transformation = Matrix()
             local_transformation.multiply(t)
