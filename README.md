@@ -35,4 +35,4 @@ Reinit the selected Objects to their initial Orientation. Function similar to th
 
 # YouTube video
 
-[![Ultimaker Cura Plugin AutoRotationTool](http://img.youtube.com/vi/H0WI-RFb83o0sQwY/0.jpg)](https://www.youtube.com/watch?v=RFb83o0sQwY)
+[![Ultimaker Cura Plugin AutoRotationTool](http://img.youtube.com/vi/RFb83o0sQwY/0.jpg)](https://www.youtube.com/watch?v=RFb83o0sQwY)
