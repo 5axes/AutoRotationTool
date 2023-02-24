@@ -1,7 +1,7 @@
 #
 # Copyright (c) 2023 5@xes
-# AutoRotateTool is released under the terms of the AGPLv3 or higher.
-# AutoRotateTool plugin is a simple wrapper around the excellent OrientationPlugin of Nallah
+# AutoRotationTool is released under the terms of the AGPLv3 or higher.
+# AutoRotationTool plugin is a simple wrapper around the excellent OrientationPlugin of Nallah
 # https://github.com/nallath/CuraOrientationPlugin
 # Original Source for Auto Orientation : https://github.com/iot-salzburg/STL-tweaker
 # Post on Cura : https://community.ultimaker.com/topic/16037-3d-object-auto-rotate-plugin-for-cura-1504-23
@@ -52,12 +52,12 @@ Resources.addSearchPath(
     os.path.join(os.path.abspath(os.path.dirname(__file__)))
 )  # Plugin translation file import
 
-catalog = i18nCatalog("autorotatetool")
+catalog = i18nCatalog("autorotationtool")
 
 if catalog.hasTranslationLoaded():
-    Logger.log("i", "Auto Rotate Tool Plugin translation loaded!")
+    Logger.log("i", "Auto Rotation Tool Plugin translation loaded!")
     
-class AutoRotateTool(Extension, QObject,):
+class AutoRotationTool(Extension, QObject,):
     def __init__(self, parent = None) -> None:
         QObject.__init__(self, parent)
         Extension.__init__(self)
@@ -69,8 +69,10 @@ class AutoRotateTool(Extension, QObject,):
         self._application.engineCreatedSignal.connect(self._onEngineCreated)
 
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation"), self.doFastAutoOrientation)
-        self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)        
-        self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate main direction (X)"), self.rotateMainDirection)
+        self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)
+        # Issue with trimesh.bounds.oriented_bounds_2D in release 4.X for Trimesh
+        if not VERSION_QT5:        
+            self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate main direction (X)"), self.rotateMainDirection)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate side direction (X)"), self.rotateSideDirection)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Reinit Rotation"), self.resetRotation)
 
@@ -102,7 +104,7 @@ class AutoRotateTool(Extension, QObject,):
             return
 
         Logger.log("d", "Inserting item in context menu")
-        qml_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self._qml_folder, "AutoRotateToolMenu.qml")
+        qml_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self._qml_folder, "AutoRotationToolMenu.qml")
         self._additional_menu = self._application.createQmlComponent(qml_path, {"manager": self})
         if not self._additional_menu:
             return
@@ -254,7 +256,7 @@ class AutoRotateTool(Extension, QObject,):
             # For debuging output the vector director and the Angle ( in radians and degree)
             Logger.log('d', "s_lg   : {}".format(s_lg))
             Logger.log('d', "Angle : {} Angle° : {}".format(anGl,deganGl)) 
-            #Something done in the AutoRotateTool.py ... It's not very clear for me, but I still have to investigate this point
+            #Something done in the AutoRotationTool.py ... It's not very clear for me, but I still have to investigate this point
             dv=self._dot_vector(vectY,(s_lg.x, s_lg.y, 0))
             Logger.log('d', "Dot vector : {}".format(dv))  
             if dv > 0 :
