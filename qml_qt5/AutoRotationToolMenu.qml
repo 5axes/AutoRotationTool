@@ -26,6 +26,12 @@ Menu
         text: catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation")
         enabled: UM.Selection.hasSelection
         onTriggered: manager.doExtendedAutoOrientation()
+    }
+    MenuItem
+    {
+        text: catalog.i18nc("@item:inmenu", "Rotate side direction (X)")
+        enabled: UM.Selection.hasSelection
+        onTriggered: manager.rotateSideDirection()
     }	
     // MenuItem
     // {
@@ -33,14 +39,6 @@ Menu
     //    enabled: UM.Selection.hasSelection
     //    onTriggered: manager.rotateMainDirection()
     //}
-	
-    MenuItem
-    {
-        text: catalog.i18nc("@item:inmenu", "Rotate side direction (X)")
-        enabled: UM.Selection.hasSelection
-        onTriggered: manager.rotateSideDirection()
-    }
-	
 	MenuItem
     {
         text: catalog.i18nc("@item:inmenu", "Reinit Rotation")
@@ -55,5 +53,6 @@ Menu
         }
     }
 
-    UM.I18nCatalog { id: catalog; name: "autorotatetool" }
+    UM.I18nCatalog { id: catalog; name: "autorotation
+	tool" }
 }
