@@ -8,7 +8,8 @@ Short-cut :
 
 	- Calculate fast optimal printing orientation : Ctrl+Shift+R
 	- Calculate extended optimal printing orientation: Ctrl+Alt+R       
-	- Rotate main direction (X): Ctrl+Alt+X
+	- Rotate Side direction (X): Ctrl+Shift+X
+	- Rotate Main direction (X): Ctrl+Alt+X
 
 The orientation plugin is a simple wrapper around the excellent STL-Tweaker by Christoph Schranz. It allows you to quickly calculate and apply the best printable orientation directly from Cura.
 
@@ -30,3 +31,8 @@ Rotate the selected element automaticaly on its longest side, parallel to the X 
 
 ### Reinit Rotation
 Reinit the selected Objects to their initial Orientation. Function similar to the Réinit Button in the Rotation Tool Menu.
+
+
+# YouTube video
+
+[![Ultimaker Cura Plugin AutoRotationTool](http://img.youtube.com/vi/H0WI-OIgcFE/0.jpg)](http://www.youtube.com/watch?v=H0WI-OIgcFE)
