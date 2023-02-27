@@ -72,12 +72,12 @@ class AutoRotationTool(Extension, QObject,):
 
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation"), self.doFastAutoOrientation)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)
-        
+        self.addMenuItem("", lambda: None)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate side direction (X)"), self.rotateSideDirection)
         # Issue with trimesh.bounds.oriented_bounds_2D in release 4.X for Trimesh
         if not VERSION_QT5:        
             self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate main direction (X)"), self.rotateMainDirection)
-        
+        self.addMenuItem(" ", lambda: None)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Reinit Rotation"), self.resetRotation)
 
         self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotate Tool"))
