@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotation Tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-27 14:03+0000\n"
+"POT-Creation-Date: 2023-02-27 14:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,7 +70,7 @@ msgstr ""
 
 #: AutoRotationTool.py:335 AutoRotationTool.py:339 AutoRotationTool.py:356
 msgctxt "@title"
-msgid "Auto-Orientation"
+msgid "Auto Rotate Tool"
 msgstr ""
 
 #: AutoRotationTool.py:339
