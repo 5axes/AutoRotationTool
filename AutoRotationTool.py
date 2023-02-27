@@ -67,6 +67,8 @@ class AutoRotationTool(Extension, QObject,):
         self._qml_folder = "qml_qt6" if not VERSION_QT5 else "qml_qt5"
 
         self._application.engineCreatedSignal.connect(self._onEngineCreated)
+        
+        self._extended_mode = False
 
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation"), self.doFastAutoOrientation)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)
@@ -316,9 +318,11 @@ class AutoRotationTool(Extension, QObject,):
 
     @pyqtSlot()
     def doFastAutoOrientation(self):
+        self._extended_mode=False    
         self.doAutoOrientation(False)
     @pyqtSlot()
     def doExtendedAutoOrientation(self):
+        self._extended_mode=True    
         self.doAutoOrientation(True)
 
     def doAutoOrientation(self, extended_mode):
@@ -345,6 +349,9 @@ class AutoRotationTool(Extension, QObject,):
 
         if job.getMessage() is not None:
             job.getMessage().hide()
-            self._message = Message(catalog.i18nc("@info:status", "All selected objects have been oriented."),
-                                    title=catalog.i18nc("@title", "Auto-Orientation"))
+            if self._extended_mode :
+                _text = i18n_catalog.i18nc("@info:status", "All selected objects have been oriented using the extended mode.")
+            else :
+                _text = i18n_catalog.i18nc("@info:status", "All selected objects have been oriented.")
+            self._message = Message(_text, title=i18n_catalog.i18nc("@title", "Auto-Orientation"), message_type = Message.MessageType.POSITIVE)
             self._message.show()
