@@ -332,11 +332,11 @@ class AutoRotationTool(Extension, QObject,):
 
         selected_nodes = Selection.getAllSelectedObjects()
         if len(selected_nodes) == 0:
-            self._message = Message(catalog.i18nc("@info:status", "No objects selected to orient. Please select one or more objects and try again."), title = catalog.i18nc("@title", "Auto-Orientation"))
+            self._message = Message(catalog.i18nc("@info:status", "No objects selected to orient. Please select one or more objects and try again."), title = catalog.i18nc("@title", "Auto Rotate Tool"))
             self._message.show()
             return
 
-        message = Message(catalog.i18nc("@info:status", "Calculating the optimal orientation..."), 0, False, -1, title = catalog.i18nc("@title", "Auto-Orientation"))
+        message = Message(catalog.i18nc("@info:status", "Calculating the optimal orientation..."), 0, False, -1, title = catalog.i18nc("@title", "Auto Rotate Tool"))
         message.show()
 
         job = CalculateOrientationJob(selected_nodes, extended_mode = extended_mode, message = message)
@@ -350,8 +350,8 @@ class AutoRotationTool(Extension, QObject,):
         if job.getMessage() is not None:
             job.getMessage().hide()
             if self._extended_mode :
-                _text = i18n_catalog.i18nc("@info:status", "All selected objects have been oriented using the extended mode.")
+                _text = catalog.i18nc("@info:status", "All selected objects have been oriented using the extended mode.")
             else :
-                _text = i18n_catalog.i18nc("@info:status", "All selected objects have been oriented.")
-            self._message = Message(_text, title=i18n_catalog.i18nc("@title", "Auto-Orientation"), message_type = Message.MessageType.POSITIVE)
+                _text = catalog.i18nc("@info:status", "All selected objects have been oriented.")
+            self._message = Message(_text, title=catalog.i18nc("@title", "Auto Rotate Tool"), message_type = Message.MessageType.POSITIVE)
             self._message.show()
