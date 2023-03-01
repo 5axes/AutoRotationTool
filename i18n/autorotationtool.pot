@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotation Tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-27 14:21+0000\n"
+"POT-Creation-Date: 2023-03-01 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: AutoRotationTool.py:83 AutoRotationTool.py:118
 msgctxt "@info:title"
-msgid "Auto Rotate Tool"
+msgid "Auto Rotation Tools"
 msgstr ""
 
 #: AutoRotationTool.py:130
@@ -90,5 +90,5 @@ msgstr ""
 
 #: qml_qt6/AutoRotationToolMenu.qml:15 qml_qt5/AutoRotationToolMenu.qml:16
 msgctxt "@item:inmenu"
-msgid "Rotate Tool"
+msgid "Rotation Tools"
 msgstr ""
