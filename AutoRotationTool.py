@@ -70,6 +70,7 @@ class AutoRotationTool(Extension, QObject,):
         
         self._extended_mode = False
 
+        self.setMenuName(catalog.i18nc("@item:inmenu", "Rotation Tools")) # Main Menu
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate fast optimal printing orientation"), self.doFastAutoOrientation)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Calculate extended optimal printing orientation"), self.doExtendedAutoOrientation)
         self.addMenuItem("", lambda: None)
