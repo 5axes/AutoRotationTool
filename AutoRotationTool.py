@@ -80,7 +80,7 @@ class AutoRotationTool(Extension, QObject,):
         self.addMenuItem(" ", lambda: None)
         self.addMenuItem(catalog.i18nc("@item:inmenu", "Reinit Rotation"), self.resetRotation)
 
-        self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotate Tool"))
+        self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotation Tools"))
         self._additional_menu = None  # type: Optional[QObject]
 
     # Origine Source Code from [FieldOfView ](https://github.com/fieldOfView)   
@@ -115,7 +115,7 @@ class AutoRotationTool(Extension, QObject,):
 
         if VERSION_QT5:
             context_menu.insertSeparator(0)
-            context_menu.insertMenu(0, catalog.i18nc("@info:title", "Auto Rotate Tool"))
+            context_menu.insertMenu(0, catalog.i18nc("@info:title", "Auto Rotation Tools"))
 
         # Move additional menu items into context menu
         self._additional_menu.moveToContextMenu(context_menu)

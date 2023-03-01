@@ -12,7 +12,7 @@ Cura.Menu
     {
         id: rotateToolMenu
 
-        title: catalog.i18nc("@item:inmenu", "Rotate Tool")
+        title: catalog.i18nc("@item:inmenu", "Rotation Tools")
 
         Cura.MenuItem
 		{
