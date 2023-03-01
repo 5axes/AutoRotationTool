@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotate Too\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-27 14:09+0000\n"
-"PO-Revision-Date: 2023-02-27 15:20+0200\n"
+"POT-Creation-Date: 2023-03-01 17:09+0000\n"
+"PO-Revision-Date: 2023-03-01 18:10+0200\n"
 "Last-Translator: 5axes <5axes@free.fr>\n"
 "Language-Team: 5axes\n"
 "Language: fr\n"
@@ -43,13 +43,13 @@ msgstr "Rotation selon direction principale (X)"
 #: AutoRotationTool.py:81 qml_qt6/AutoRotationToolMenu.qml:47
 #: qml_qt5/AutoRotationToolMenu.qml:44
 msgctxt "@item:inmenu"
-msgid "Reinit Rotation"
+msgid "Reset Rotation"
 msgstr "Réinitialiser la Rotation"
 
 #: AutoRotationTool.py:83 AutoRotationTool.py:118
 msgctxt "@info:title"
-msgid "Auto Rotate Tool"
-msgstr "Outil d'auto-rotation"
+msgid "Auto Rotation Tools"
+msgstr "Outils d'Auto-Rotation"
 
 #: AutoRotationTool.py:130
 msgctxt "@info:status"
@@ -93,8 +93,16 @@ msgstr "Tous les objets sélectionnés ont été orientés."
 
 #: qml_qt6/AutoRotationToolMenu.qml:15 qml_qt5/AutoRotationToolMenu.qml:16
 msgctxt "@item:inmenu"
-msgid "Rotate Tool"
-msgstr "Outil d'auto-rotation"
+msgid "Rotation Tools"
+msgstr "Outils d'auto-rotation"
+
+#~ msgctxt "@item:inmenu"
+#~ msgid "Reinit Rotation"
+#~ msgstr "Réinitialiser la Rotation"
+
+#~ msgctxt "@item:inmenu"
+#~ msgid "Rotate Tool"
+#~ msgstr "Outil d'auto-rotation"
 
 #~ msgctxt "@title"
 #~ msgid "Auto-Orientation"
