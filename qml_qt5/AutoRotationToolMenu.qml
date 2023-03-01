@@ -41,7 +41,7 @@ Menu
     //}
 	MenuItem
     {
-        text: catalog.i18nc("@item:inmenu", "Reinit Rotation")
+        text: catalog.i18nc("@item:inmenu", "Reset Rotation")
         enabled: UM.Selection.hasSelection
         onTriggered: manager.resetRotation()
     }

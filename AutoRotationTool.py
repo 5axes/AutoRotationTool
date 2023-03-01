@@ -78,7 +78,7 @@ class AutoRotationTool(Extension, QObject,):
         if not VERSION_QT5:        
             self.addMenuItem(catalog.i18nc("@item:inmenu", "Rotate main direction (X)"), self.rotateMainDirection)
         self.addMenuItem(" ", lambda: None)
-        self.addMenuItem(catalog.i18nc("@item:inmenu", "Reinit Rotation"), self.resetRotation)
+        self.addMenuItem(catalog.i18nc("@item:inmenu", "Reset Rotation"), self.resetRotation)
 
         self._message = Message(title=catalog.i18nc("@info:title", "Auto Rotation Tools"))
         self._additional_menu = None  # type: Optional[QObject]
