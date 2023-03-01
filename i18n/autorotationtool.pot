@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Auto Rotation Tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-01 17:11+0000\n"
+"POT-Creation-Date: 2023-03-01 17:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,78 +17,79 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: AutoRotationTool.py:73 qml_qt6/AutoRotationToolMenu.qml:19
+#: AutoRotationTool.py:73 qml_qt6/AutoRotationToolMenu.qml:15
+#: qml_qt5/AutoRotationToolMenu.qml:16
+msgctxt "@item:inmenu"
+msgid "Rotation Tools"
+msgstr ""
+
+#: AutoRotationTool.py:74 qml_qt6/AutoRotationToolMenu.qml:19
 #: qml_qt5/AutoRotationToolMenu.qml:20
 msgctxt "@item:inmenu"
 msgid "Calculate fast optimal printing orientation"
 msgstr ""
 
-#: AutoRotationTool.py:74 qml_qt6/AutoRotationToolMenu.qml:26
+#: AutoRotationTool.py:75 qml_qt6/AutoRotationToolMenu.qml:26
 #: qml_qt5/AutoRotationToolMenu.qml:26
 msgctxt "@item:inmenu"
 msgid "Calculate extended optimal printing orientation"
 msgstr ""
 
-#: AutoRotationTool.py:76 qml_qt6/AutoRotationToolMenu.qml:33
+#: AutoRotationTool.py:77 qml_qt6/AutoRotationToolMenu.qml:33
 #: qml_qt5/AutoRotationToolMenu.qml:32
 msgctxt "@item:inmenu"
 msgid "Rotate side direction (X)"
 msgstr ""
 
-#: AutoRotationTool.py:79 qml_qt6/AutoRotationToolMenu.qml:40
+#: AutoRotationTool.py:80 qml_qt6/AutoRotationToolMenu.qml:40
 msgctxt "@item:inmenu"
 msgid "Rotate main direction (X)"
 msgstr ""
 
-#: AutoRotationTool.py:81 qml_qt6/AutoRotationToolMenu.qml:47
+#: AutoRotationTool.py:82 qml_qt6/AutoRotationToolMenu.qml:47
 #: qml_qt5/AutoRotationToolMenu.qml:44
 msgctxt "@item:inmenu"
 msgid "Reset Rotation"
 msgstr ""
 
-#: AutoRotationTool.py:83 AutoRotationTool.py:118
+#: AutoRotationTool.py:84 AutoRotationTool.py:119
 msgctxt "@info:title"
 msgid "Auto Rotation Tools"
 msgstr ""
 
-#: AutoRotationTool.py:130
+#: AutoRotationTool.py:131
 msgctxt "@info:status"
 msgid "Please select a single model first"
 msgstr ""
 
-#: AutoRotationTool.py:135 AutoRotationTool.py:153
+#: AutoRotationTool.py:136 AutoRotationTool.py:154
 msgctxt "@info:status"
 msgid "Please select one or more models first"
 msgstr ""
 
-#: AutoRotationTool.py:335
+#: AutoRotationTool.py:336
 msgctxt "@info:status"
 msgid ""
 "No objects selected to orient. Please select one or more objects and try "
 "again."
 msgstr ""
 
-#: AutoRotationTool.py:335 AutoRotationTool.py:339 AutoRotationTool.py:356
+#: AutoRotationTool.py:336 AutoRotationTool.py:340 AutoRotationTool.py:357
 msgctxt "@title"
 msgid "Auto Rotate Tool"
 msgstr ""
 
-#: AutoRotationTool.py:339
+#: AutoRotationTool.py:340
 msgctxt "@info:status"
 msgid "Calculating the optimal orientation..."
 msgstr ""
 
-#: AutoRotationTool.py:353
+#: AutoRotationTool.py:354
 msgctxt "@info:status"
 msgid "All selected objects have been oriented using the extended mode."
 msgstr ""
 
-#: AutoRotationTool.py:355
+#: AutoRotationTool.py:356
 msgctxt "@info:status"
 msgid "All selected objects have been oriented."
-msgstr ""
-
-#: qml_qt6/AutoRotationToolMenu.qml:15 qml_qt5/AutoRotationToolMenu.qml:16
-msgctxt "@item:inmenu"
-msgid "Rotation Tools"
 msgstr ""
