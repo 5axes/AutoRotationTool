@@ -111,7 +111,7 @@ class AutoRotationTool(Extension, QObject,):
             return
 
         Logger.log("d", "Inserting item in context menu")
-        qml_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self._qml_folder, "AutoRotationToolMenu.qml")
+        qml_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'qml', self._qml_folder, "AutoRotationToolMenu.qml")
         self._additional_menu = self._application.createQmlComponent(qml_path, {"manager": self})
         if not self._additional_menu:
             return
