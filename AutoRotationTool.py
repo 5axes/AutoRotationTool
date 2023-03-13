@@ -7,6 +7,8 @@
 # Post on Cura : https://community.ultimaker.com/topic/16037-3d-object-auto-rotate-plugin-for-cura-1504-23
 # Tweaker_-_Auto_Rotation_Module_for_FDM_3D_Printing : https://www.researchgate.net/publication/311765131_Tweaker_-_Auto_Rotation_Module_for_FDM_3D_Printing
 #
+# V3.7.1 13-03-2023 Change Location for I18n
+#
 
 import os
 import numpy
@@ -49,7 +51,7 @@ from .CalculateOrientationJob import CalculateOrientationJob
 from .SetTransformMatrixOperation import SetTransformMatrixOperation
 
 Resources.addSearchPath(
-    os.path.join(os.path.abspath(os.path.dirname(__file__)))
+    os.path.join(os.path.abspath(os.path.dirname(__file__)),'resources')
 )  # Plugin translation file import
 
 catalog = i18nCatalog("autorotationtool")
