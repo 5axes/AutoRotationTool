@@ -2,7 +2,7 @@
 
 Plugin Rotate Tool to get the automatic rotation on Right Clic 
 
-The Auto Rotate Tool plugin is a copy of the [CuraOrientationPlugin ](https://github.com/5axes/CuraOrientationPlugin). However, it allows to add an access to the orientation functions from keyboard shortcuts and a contextual menu.
+The Auto Rotate Tool plugin is a fork of the [CuraOrientationPlugin ](https://github.com/nallath/CuraOrientationPlugin). However, it allows to add an access to the orientation functions from keyboard shortcuts and a contextual menu.
 
 Short-cut :
 
